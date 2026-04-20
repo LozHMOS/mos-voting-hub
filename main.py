@@ -22,11 +22,12 @@ st.sidebar.title("Mapped Out Solutions")
 st.sidebar.write("**MOS Voting Hub**")
 st.sidebar.caption("Deciding the next application to build")
 
-page = st.navigation({
-    "Dashboard": st.Page("pages/1_dashboard.py", title="Live Leaderboard"),
-    "Submit New Idea": st.Page("pages/2_submit_idea.py", title="Submit Idea"),
-    "Vote on Ideas": st.Page("pages/3_vote.py", title="Vote"),
-    "Idea Details": st.Page("pages/4_idea_details.py", title="View Details")
-})
+# Corrected navigation using a list of st.Page objects (works reliably in Streamlit 1.56)
+page = st.navigation([
+    st.Page("pages/1_dashboard.py", title="Live Leaderboard"),
+    st.Page("pages/2_submit_idea.py", title="Submit Idea"),
+    st.Page("pages/3_vote.py", title="Vote"),
+    st.Page("pages/4_idea_details.py", title="View Details")
+])
 
 page.run()
