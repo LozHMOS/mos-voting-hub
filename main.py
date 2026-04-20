@@ -23,10 +23,10 @@ st.sidebar.write("**MOS Voting Hub**")
 st.sidebar.caption("Deciding the next application to build")
 
 page = st.navigation({
-    "Dashboard": st.Page("pages/1_Dashboard.py", title="Live Leaderboard"),
-    "Submit New Idea": st.Page("pages/2_Submit_Idea.py", title="Submit Idea"),
-    "Vote on Ideas": st.Page("pages/3_Vote.py", title="Vote"),
-    "Idea Details": st.Page("pages/4_Idea_Details.py", title="View Details")
+    "Dashboard": st.Page("pages/1_dashboard.py", title="Live Leaderboard"),
+    "Submit New Idea": st.Page("pages/2_submit_idea.py", title="Submit Idea"),
+    "Vote on Ideas": st.Page("pages/3_vote.py", title="Vote"),
+    "Idea Details": st.Page("pages/4_idea_details.py", title="View Details")
 })
 
 page.run()
